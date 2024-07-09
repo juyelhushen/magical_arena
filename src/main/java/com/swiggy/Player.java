@@ -23,13 +23,18 @@ public class Player {
         return randomNum.nextInt(6) + 1;   //generating random number between 1 and 6 for attack
     }
 
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
     public int defend() {
         return randomNum.nextInt(6) + 1;   // generating random number between 1 and 6 for defense
     }
 
-    public int getStrength() {
-        return strength;
-    }
 
     public void reduceHealth(int damage) {
         health -= damage;
