@@ -45,7 +45,7 @@ public class Player {
         if (health < 0) health = 0;    //assigning 0 to health in case health is -ve
     }
 
-    public boolean isAlive() {
-        return health > 0;       // to check whether is player alive or not
+    public boolean isAlive() {           // to check whether is player alive or not
+        return health > 0;
     }
 }
