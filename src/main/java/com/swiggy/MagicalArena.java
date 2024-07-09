@@ -14,8 +14,8 @@ public class MagicalArena {
         Player defender = attacker == playerA ? playerB : playerA;
 
         while (attacker.isAlive() && defender.isAlive()) {
-            int rollOnAttack = attacker.attack();
-            int rollOnDefense = defender.defend();
+            int rollOnAttack = attacker.rollOnAttack();
+            int rollOnDefense = defender.rollOnDefend();
 
             int damage = rollOnAttack * attacker.getAttack() - rollOnDefense * defender.getStrength();
             if (damage > 0) defender.reduceHealth(damage); // id damage more than 0, reducing the health by damage

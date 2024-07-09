@@ -19,8 +19,8 @@ public class Player {
         return health;
     }
 
-    public int attack() {
-        return randomNum.nextInt(6) + 1;   //generating random number between 1 and 6 for attack
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getStrength() {
@@ -31,7 +31,11 @@ public class Player {
         return attack;
     }
 
-    public int defend() {
+    public int rollOnAttack() {
+        return randomNum.nextInt(6) + 1;   //generating random number between 1 and 6 for attack
+    }
+
+    public int rollOnDefend() {
         return randomNum.nextInt(6) + 1;   // generating random number between 1 and 6 for defense
     }
 
