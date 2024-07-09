@@ -32,20 +32,20 @@ public class Player {
     }
 
     public int rollOnAttack() {
-        return randomNum.nextInt(6) + 1;   //generating random number between 1 and 6 for attack
+        return randomNum.nextInt(6) + 1;   //generating random number between 1 and 6 for attack roll
     }
 
     public int rollOnDefend() {
-        return randomNum.nextInt(6) + 1;   // generating random number between 1 and 6 for defense
+        return randomNum.nextInt(6) + 1;   // generating random number between 1 and 6 for defense roll
     }
 
 
     public void reduceHealth(int damage) {
         health -= damage;
-        if (health < 0) health = 0;        //assigning 0 to health  if health is -ve
+        if (health < 0) health = 0;    //assigning 0 to health in case health is -ve
     }
 
     public boolean isAlive() {
-        return health > 0;       // checking whether is player alive or not
+        return health > 0;       // to check whether is player alive or not
     }
 }
