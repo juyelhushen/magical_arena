@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Player {
     private int health;
-    private int strength;
-    private int attack;
-    private Random randomNum;
+    private final int strength;
+    private final int attack;
+    private final Random randomNum;
 
     public Player(int health, int strength, int attack) {
         this.health = health;
