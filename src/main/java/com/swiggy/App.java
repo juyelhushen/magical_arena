@@ -9,6 +9,10 @@ public class App {
         Player playerB = new Player(100, 10, 5);
 
         MagicalArena arena = new MagicalArena(playerA, playerB);
-        arena.startFight();  // calling startFight() from the arena
+        int r = 0;
+        while(r < 10) {
+            arena.startFight();  // calling startFight() from the arena
+            r++;
+        }
     }
 }

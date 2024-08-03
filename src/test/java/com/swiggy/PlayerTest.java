@@ -2,6 +2,8 @@ package com.swiggy;
 
 import org.junit.Test;
 
+import java.lang.reflect.Field;
+
 import static org.junit.Assert.*;
 
 /*
@@ -34,10 +36,12 @@ public class PlayerTest {
     }
 
     @Test
-    public void testPlayerIsAlive() {
+    public void testPlayerIsAlive() throws NoSuchFieldException, IllegalAccessException {
         Player player = new Player(100, 10, 20);
         assertTrue(player.isAlive());
-        player.setHealth(0);
+        Field health = Player.class.getDeclaredField("health");
+        health.setAccessible(true);
+        health.set(player, 0);
         assertFalse(player.isAlive());
     }
 }
